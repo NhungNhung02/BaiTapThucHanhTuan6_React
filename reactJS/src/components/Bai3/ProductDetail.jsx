@@ -1,13 +1,22 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
-export default function ProductDetail(){
-    const{id} =useParams()
+export default function ProductDetail() {
+    const { id } = useParams()
+    const navigate = useNavigate()
 
-    return(
+    const handleBuy = () => {
+        navigate('/checkout')
+    }
+
+    return (
         <div>
             <h2>Chi tiet san pham</h2>
-            <p>Prouct ID: {id}</p>
+            <p>Product ID: {id}</p>
+
+            <button onClick={handleBuy}>
+                Mua hàng
+            </button>
         </div>
     )
 }
