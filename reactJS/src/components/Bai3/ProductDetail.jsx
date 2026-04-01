@@ -14,7 +14,7 @@ export default function ProductDetail() {
             <h2>Chi tiet san pham</h2>
             <p>Product ID: {id}</p>
 
-            <button onClick={handleBuy}>
+            <button onClick={() => navigate('/checkout')}>
                 Mua hàng
             </button>
         </div>
